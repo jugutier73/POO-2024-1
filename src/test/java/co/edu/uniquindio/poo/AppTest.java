@@ -1,7 +1,7 @@
 /**
  * Clase para probar el funcionamiento del código de un estudiante
  * @author Área de programación UQ
- * @since 2023-08
+ * @since 2024-01
  * 
  * Licencia GNU/GPL V3.0 (https://raw.githubusercontent.com/grid-uq/poo/main/LICENSE) 
  */
