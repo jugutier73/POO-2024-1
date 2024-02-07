@@ -1,11 +1,13 @@
 # demo
 
-Descripciín basisca de su Proyecto de POO ...
+Luis es un profesor de la universidad del Quindío que le ha solicitado diseñar un sistema para la gestión de los estudiantes del curso de programación 1. Él necesita que la aplicación que permita:
+
+Almacenar la información de un estudiante, incluyendo su número de identificación, nombres, apellidos, correo, teléfono y edad.
+
 
 # Autores
 
-- Autor 1
-- Autor 2
+- Profesores del área de programación
 
 # Herramientas
 

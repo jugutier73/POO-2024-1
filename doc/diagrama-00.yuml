@@ -1,0 +1,6 @@
+// {type:class}
+// {direction:leftToRight}
+// {generate:true}
+
+[Estudiante|nombres:Texto;apellidos:Texto;numeroIdentificacion:Fecha;correo:Texto;telefono:Texto;edad:Entero]
+
