@@ -26,7 +26,7 @@ public class AppTest {
     public void datosCompletos() {
         LOG.info("Inicio datosCompletos");
 
-        Estudiante estudiante = new Estudiante("Camila", "Alzate Rios", “109453264”, "camila@uniquindio.edu.co", “315635674”, 18);
+        Estudiante estudiante = new Estudiante("Camila", "Alzate Rios", "109453264", "camila@uniquindio.edu.co", "315635674", 18);
 
         assertEquals("Camila", estudiante.nombres());
         assertEquals("Alzate Rios", estudiante.apellidos());
@@ -63,7 +63,7 @@ public class AppTest {
     @Test
     public void edadNegativa() {
         LOG.info("Inicio datosNegativos");
-        Estudiante estudiante = new Estudiante("Camila", "Alzate Rios", "109453264", "camila@uniquindio.edu.co", "315635674", -18);
+        assertThrows(Throwable.class, () -> new Estudiante("Camila", "Alzate Rios", "109453264", "camila@uniquindio.edu.co", "315635674", -18));
         LOG.info("Finalización datosNegativos");
     }
 
@@ -73,7 +73,7 @@ public class AppTest {
     @Test
     public void correoInvalido() {
         LOG.info("Inicio correoInvalido");
-        Estudiante estudiante = new Estudiante("Camila", "Alzate Rios", "109453264", "cami", "315635674", 18);
+        assertThrows(Throwable.class, () -> new Estudiante("Camila", "Alzate Rios", "109453264", "cami", "315635674", 18));
         LOG.info("Finalización correoInvalido");
     }
 
