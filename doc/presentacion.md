@@ -55,9 +55,9 @@ Información de un estudiante<br />
   }
 </style>
 
-Luis es un profesor de la universidad del Quindío que le ha solicitado diseñar un sistema para la gestión de los estudiantes del curso de programación 1. Para ello, él necesita que la aplicación que permita:
+Robinson es un profesor de la universidad del Quindío que le ha solicitado diseñar un sistema para la gestión de los estudiantes del curso de Programación 1. Para ello, él necesita que la aplicación que permita:
 
-Almacenar la información de un estudiante, incluyendo su número de identificación, nombres, apellidos, correo, teléfono y edad.
+Almacenar la información de **VARIOS** estudiantes, incluyendo su número de identificación (sin repetir), nombres, apellidos, correo, teléfono y edad. Desea listar los estudiantes en orden alfabético y en orden descendente según la edad. También desea obtener la lista de los estudiantes menores de edad.
 
 ---
 
@@ -67,8 +67,11 @@ Almacenar la información de un estudiante, incluyendo su número de identificac
   }
 </style>
 
-- Almacenar la información de un estudiante. 
-
+- Almacenar/Recuperar la información de varios estudiante. 
+- Agregar/Recuperar un estudiante al curso
+- Obtener el listado de los estudiantes en orden alfabético
+- Obtener el listado de los estudiantes en orden descendente según la edad
+- Obtener el listado de los estudiantes menores de edad
 
 ---
 
@@ -78,12 +81,16 @@ Almacenar la información de un estudiante, incluyendo su número de identificac
   }
 </style>
 
-- nombres : Texto
-- apellidos :Texto
-- número de identificación: Texto
-- correo: Texto
-- teléfono : Texto 
-- edad: Entero
+- del curso
+  - nombre: Texto
+  - La lista de estudiantes del curso : Colección de estudiantes
+- por cada estudiante
+  - nombres : Text
+  - apellidos :Texto
+  - número de identificación: Texto
+  - correo: Texto
+  - teléfono : Texto 
+  - edad: Entero
 
 
 
@@ -95,12 +102,13 @@ Almacenar la información de un estudiante, incluyendo su número de identificac
   }
 </style>
 
+- Curso
 - Estudiante
 
 <div style="position: absolute; left: 40%; top:30%; ">
 
 
-![width:300](diagrama-00.svg)
+![width:500](diagrama-00.svg)
 </div>
 
 ---
@@ -108,60 +116,30 @@ Almacenar la información de un estudiante, incluyendo su número de identificac
 
 <style scoped>
 .texto:after {
-    content: 'Abstracción: ¿Qué solicitan finalmente?';
+    content: 'Abstracción: ¿Cómo se distribuyen las funcionalidades?';
   }
 </style>
 
-- Almacenar la información de un estudiante
-- Recuperar la información de un estudiante
-
-
-
----
-
-
-<style scoped>
-.texto:after {
-    content: 'Descomposición: ¿Cómo se distribuyen las funcionalidades?';
-  }
-</style>
-
-- Almacenar la 
-información del estudiante
-
-<div style="position: absolute; left: 40%; top:30%; ">
-
-![width:800](diagrama-01.svg)
-</div>
-
----
-
-
-<style scoped>
-.texto:after {
-    content: 'Descomposición: ¿Cómo se distribuyen las funcionalidades?';
-  }
-</style>
-
-- Recuperar la información
- de un estudiante
-
-<div style="position: absolute; left: 40%; top:30%; ">
-
-![width:800](diagrama-02.svg)
-</div>
+- Estudiante
+  - Almacenar/Recuperar la información de varios estudiante. 
+- Curso
+  - Obtener el nombre del curso
+  - Agregar un estudiante al curso
+      - Validar que el número de identificación no exista
+  - Obtener el listado de los estudiantes en orden alfabético
+  - Obtener el listado de los estudiantes en orden descendente según la edad
+  - Obtener el listado de los estudiantes menores de edad
 
 ---
 
 <style scoped>
 .texto:after {
-    content: 'Descomposición: ¿Qué debo hacer para probar las funcionalidades?';
+    content: 'Abstracción: ¿Cómo se distribuyen las funcionalidades?';
   }
 </style>
 
-- Almacenar datos de prueba
-- Recuperar los datos de prueba
-- Verificar que los datos almacenados coinciden con los datos recuperados
+![width:1500](diagrama-01.svg)
+
 
 
 ---
@@ -173,17 +151,80 @@ información del estudiante
   }
 </style>
 
-<div style="font-size: 9pt">
+
+<div style="font-size: 12pt;">
+
+Clase: **Estudiante**
 
 | Prueba                                | Entrada de datos                                          | Salida (Resultado)                                                                                  |
 |---------------------------------------|-----------------------------------------------------------|-----------------------------------------------------------------------------------------------------|
-| Datos Completos | Estudiante(“Camila, Alzate Rios”,”109453264”, “camila@uniquindio.edu.co”, “315635674”, 18)| Estudiante creado Estudiante(“Camila, Alzate Rios”,”109453264”, “camila@uniquindio.edu.co”, “315635674”, 18) |
+| Datos Completos | Estudiante(“Camila", "Alzate Rios”, ”109453264”, “camila@uniquindio.edu.co”, “315635674”, 18)| Estudiante creado Estudiante(“Camila", "Alzate Rios”,”109453264”, “camila@uniquindio.edu.co”, “315635674”, 18) |
 | Con datos nulos | Estudiante(null,null,null,null,null,0) | Error, faltan datos para la creación del estudiante |
 | Datos vacíos | Estudiante(“”, “”, “”, “”, 0)| Error, faltan datos para la creación del estudiante |
 | Edad negativa | Estudiante(“Camila, Alzate Rios”, “109453264”, “camila@uniquindio.edu.co”, “315635674”, -18) |Error, la edad no pueden ser negativos                      |
 | Correo inválido | Estudiante(“Camila, Alzate Rios”, “109453264”, “cami”, “315635674”, 18)  | Error, el correo del estudiante es invalido         |
 
+Pruebas a sociadas a las clase **Estudiante** que se está reutilizando del Problema 01.
 </div>
+
+---
+
+<style scoped>
+.texto:after {
+    content: 'Descomposición: ¿Qué debo hacer para probar las funcionalidades?';
+  }
+</style>
+
+<div style="font-size: 12pt;">
+
+Clase: **Curso**
+
+| Prueba                                | Entrada de datos                                          | Salida (Resultado)                                                                                  |
+|---------------------------------------|-----------------------------------------------------------|-----------------------------------------------------------------------------------------------------|
+| Datos Completos | Curso("Programación 1")| Curso creado Curso("Programación 1") |
+| Agregar un estudiante | registrarEstudiante( Estudiante(“Camila", "Alzate Rios”,”109453264”, “camila@uniquindio.edu.co”, “315635674”, 18) )| Estudiante registrado Estudiante(“Camila", "Alzate Rios”,”109453264”, “camila@uniquindio.edu.co”, “315635674”, 18)|
+| Agregar un estudiante nulo | registrarEstudiante( null )| Error, no puede agregar un estudiante nulo.|
+| Agregar un estudiante repetido | registrarEstudiante( Estudiante(“Camila", "Alzate Rios”,”109453264”, “camila@uniquindio.edu.co”, “315635674”, 18) ) <br> registrarEstudiante( Estudiante(Rodrigo", "Calderon”,”109453264”, “rodrigo@uniquindio.edu.co”, “3223451278”, 19) )| Error, no puede registrar dos veces el mismo número de identificación |
+</div>
+
+---
+
+
+<style scoped>
+.texto:after {
+    content: 'Descomposición: ¿Qué debo hacer para probar las funcionalidades?';
+  }
+</style>
+
+<div style="font-size: 12pt;">
+
+Clase: **Curso**
+
+| Prueba                                | Entrada de datos                                          | Salida (Resultado)                                                                                  |
+|---------------------------------------|-----------------------------------------------------------|-----------------------------------------------------------------------------------------------------|
+| Obtener listado alfabético | registrarEstudiante( Estudiante(“Camila", "Alzate Rios”,”109453264”, “camila@uniquindio.edu.co”, “315635674”, 15) ) <br> registrarEstudiante( Estudiante(“Xiomara", "Gomez”,”109445634”, “xiomara@uniquindio.edu.co”, “3148763412”, 31) ) <br> registrarEstudiante( Estudiante(“Ana Maria", "Quintero”,”109453264”, “anamaria@uniquindio.edu.co”, “3137442312”, 28) ) <br> registrarEstudiante( Estudiante(“Yudi", "Pulgarin”,”1092394924”, “yudi@uniquindio.edu.co”, “3218341234”, 17) )| Se obtiene el listado de los estudiantes en el orden: "Ana Maria", "Camila", "Xiomara", "Yudi" |
+| Obtener listado edad descendete | registrarEstudiante( Estudiante(“Camila", "Alzate Rios”,”109453264”, “camila@uniquindio.edu.co”, “315635674”, 15) ) <br> registrarEstudiante( Estudiante(“Xiomara", "Gomez”,”109445634”, “xiomara@uniquindio.edu.co”, “3148763412”, 31) ) <br> registrarEstudiante( Estudiante(“Ana Maria", "Quintero”,”109453264”, “anamaria@uniquindio.edu.co”, “3137442312”, 28) ) <br> registrarEstudiante( Estudiante(“Yudi", "Pulgarin”,”1092394924”, “yudi@uniquindio.edu.co”, “3218341234”, 17) )| Se obtiene el listado de los estudiantes en el orden: "Xiomara", "Ana Maria", "Yudi", "Camila" |
+</div>
+
+---
+
+
+<style scoped>
+.texto:after {
+    content: 'Descomposición: ¿Qué debo hacer para probar las funcionalidades?';
+  }
+</style>
+
+<div style="font-size: 12pt;">
+
+Clase: **Curso**
+
+| Prueba                                | Entrada de datos                                          | Salida (Resultado)                                                                                  |
+|---------------------------------------|-----------------------------------------------------------|-----------------------------------------------------------------------------------------------------|
+| Obtener listado menores de edad | registrarEstudiante( Estudiante(“Camila", "Alzate Rios”,”109453264”, “camila@uniquindio.edu.co”, “315635674”, 15) ) <br> registrarEstudiante( Estudiante(“Xiomara", "Gomez”,”109445634”, “xiomara@uniquindio.edu.co”, “3148763412”, 31) ) <br> registrarEstudiante( Estudiante(“Ana Maria", "Quintero”,”109453264”, “anamaria@uniquindio.edu.co”, “3137442312”, 28) ) <br> registrarEstudiante( Estudiante(“Yudi", "Pulgarin”,”1092394924”, “yudi@uniquindio.edu.co”, “3218341234”, 17) )| Se obtiene el listado de los estudiantes en el orden:  "Camila", "Yudi" |
+</div>
+
+
 
 ---
 
@@ -194,7 +235,7 @@ información del estudiante
   }
 </style>
 
-- No aplica
+- La clase **Estudiante** del Problema 01 con sus respectivas pruebas.
 
 
 ---

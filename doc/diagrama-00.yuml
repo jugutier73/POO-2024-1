@@ -2,5 +2,7 @@
 // {direction:leftToRight}
 // {generate:true}
 
-[Estudiante|nombres:Texto;apellidos:Texto;numeroIdentificacion:Texto;correo:Texto;telefono:Texto;edad:Entero]
+[Curso|-nombre:Texto]
+[Estudiante|-nombres:Texto;-apellidos:Texto;-numeroIdentificacion:Texto;-correo:Texto;-telefono:Texto;-edad:Entero]
 
+[Curso]<>1-*>[Estudiante]

@@ -2,5 +2,7 @@
 // {direction:leftToRight}
 // {generate:true}
 
-[Estudiante|nombres:Texto;apellidos:Texto;numeroIdentificacion:Texto;correo:Texto;telefono:Texto;edad:Entero|+constructor(nombres:Texto,apellidos:Texto,numeroIdentificacion:Texto, correo:Texto, telefono:Texto, edad:Entero)]
+[Curso|-nombre:Texto|+constructor(nombre:Texto);+agregarEstudiante(Estudiante:Estudiante);+obtenerEstudiante(numeroIdentificacion:Texto):Estudiante;+obtenerListadoAlfabetico():Estudiante*;+obtenerListadoEdadDescente():Estudiante*;+obtenerListadoMenoresEdad():Estudiante*;-valiarNumeroIdentificacionExiste():Lógico]
+[Estudiante|-nombres:Texto;-apellidos:Texto;-numeroIdentificacion:Texto;-correo:Texto;-telefono:Texto;-edad:Entero|+constructor(nombres:Texto,apellidos:Texto,numeroIdentificacion:Texto, correo:Texto, telefono:Texto, edad:Entero);+geNombres():Texto;+getApellidos():Texto;+getNumeroIdentificacion():Texto;+getCorreo():Texto;+getTelefono():Texto;+getEdad(): Entero]
 
+[Curso]<>1-*>[Estudiante]
