@@ -116,7 +116,7 @@ Almacenar la información de **VARIOS** estudiantes, incluyendo su número de id
 
 <style scoped>
 .texto:after {
-    content: 'Abstracción: ¿Cómo se distribuyen las funcionalidades?';
+    content: 'Descomposición: ¿Cómo se distribuyen las funcionalidades?';
   }
 </style>
 
@@ -134,7 +134,7 @@ Almacenar la información de **VARIOS** estudiantes, incluyendo su número de id
 
 <style scoped>
 .texto:after {
-    content: 'Abstracción: ¿Cómo se distribuyen las funcionalidades?';
+    content: 'Descomposición: ¿Cómo se distribuyen las funcionalidades?';
   }
 </style>
 
