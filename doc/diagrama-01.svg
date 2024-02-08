@@ -17,7 +17,7 @@
 <polygon fill="none" stroke="#000000" points="0,-32 0,-124 532,-124 532,-32 0,-32"/>
 <text text-anchor="start" x="232.6605" y="-105" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">nombres:Texto</text>
 <text text-anchor="start" x="232.3815" y="-93" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">apellidos:Texto</text>
-<text text-anchor="start" x="204.5965" y="-81" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">numeroIdentificacion:Fecha</text>
+<text text-anchor="start" x="205.9865" y="-81" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">numeroIdentificacion:Texto</text>
 <text text-anchor="start" x="237.94" y="-69" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">correo:Texto</text>
 <text text-anchor="start" x="234.3215" y="-57" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">telefono:Texto</text>
 <text text-anchor="start" x="238.7655" y="-45" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">edad:Entero</text>
