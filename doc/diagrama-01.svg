@@ -12,18 +12,19 @@
 <!-- A0 -->
 <g id="node1" class="node">
 <title>A0</title>
-<polygon fill="none" stroke="#000000" points=".5,-166 .5,-198 283.5,-198 283.5,-166 .5,-166"/>
-<text text-anchor="start" x="128.667" y="-179" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">Curso</text>
-<polygon fill="none" stroke="#000000" points=".5,-134 .5,-166 283.5,-166 283.5,-134 .5,-134"/>
-<text text-anchor="start" x="109.496" y="-147" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">&#45;nombre:Texto</text>
-<polygon fill="none" stroke="#000000" points=".5,-30 .5,-134 283.5,-134 283.5,-30 .5,-30"/>
-<text text-anchor="start" x="80.186" y="-115" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+constructor(nombre:Texto)</text>
-<text text-anchor="start" x="46.274" y="-103" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+agregarEstudiante(Estudiante:Estudiante)</text>
-<text text-anchor="start" x="10.156" y="-91" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+obtenerEstudiante(numeroIdentificacion:Texto):Estudiante</text>
-<text text-anchor="start" x="53.778" y="-79" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+obtenerListadoAlfabetico():Estudiante*</text>
-<text text-anchor="start" x="42.9385" y="-67" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+obtenerListadoEdadDescente():Estudiante*</text>
-<text text-anchor="start" x="44.6085" y="-55" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+obtenerListadoMenoresEdad():Estudiante*</text>
-<text text-anchor="start" x="46.7185" y="-43" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">&#45;valiarNumeroIdentificacionExiste():Lógico</text>
+<polygon fill="none" stroke="#000000" points=".5,-172 .5,-204 283.5,-204 283.5,-172 .5,-172"/>
+<text text-anchor="start" x="128.667" y="-185" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">Curso</text>
+<polygon fill="none" stroke="#000000" points=".5,-140 .5,-172 283.5,-172 283.5,-140 .5,-140"/>
+<text text-anchor="start" x="109.496" y="-153" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">&#45;nombre:Texto</text>
+<polygon fill="none" stroke="#000000" points=".5,-24 .5,-140 283.5,-140 283.5,-24 .5,-24"/>
+<text text-anchor="start" x="80.186" y="-121" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+constructor(nombre:Texto)</text>
+<text text-anchor="start" x="46.274" y="-109" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+agregarEstudiante(Estudiante:Estudiante)</text>
+<text text-anchor="start" x="10.156" y="-97" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+obtenerEstudiante(numeroIdentificacion:Texto):Estudiante</text>
+<text text-anchor="start" x="75.728" y="-85" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+getEstudiantes():Estudiante*</text>
+<text text-anchor="start" x="53.778" y="-73" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+obtenerListadoAlfabetico():Estudiante*</text>
+<text text-anchor="start" x="42.9385" y="-61" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+obtenerListadoEdadDescente():Estudiante*</text>
+<text text-anchor="start" x="44.6085" y="-49" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+obtenerListadoMenoresEdad():Estudiante*</text>
+<text text-anchor="start" x="46.7185" y="-37" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">&#45;valiarNumeroIdentificacionExiste():Lógico</text>
 </g>
 <!-- A1 -->
 <g id="node2" class="node">
