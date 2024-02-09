@@ -8,9 +8,11 @@
 package co.edu.uniquindio.poo;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertIterableEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
+import java.util.Collection;
 import java.util.List;
 import java.util.logging.Logger;
 import org.junit.jupiter.api.Test;
@@ -98,7 +100,7 @@ public class CursoTest {
 
         var camila = new Estudiante("Camila", "Alzate Rios", "109453264", "camila@uniquindio.edu.co", "315635674", 15);
         var xiomara = new Estudiante("Xiomara", "Gomez", "109445634", "xiomara@uniquindio.edu.co", "3148763412", 31);
-        var ana = new Estudiante("Ana Maria", "Quintero", "109453264", "anamaria@uniquindio.edu.co", "3137442312", 28);
+        var ana = new Estudiante("Ana Maria", "Quintero", "109498764", "anamaria@uniquindio.edu.co", "3137442312", 28);
         var yudi = new Estudiante("Yudi", "Pulgarin", "1092394924", "yudi@uniquindio.edu.co", "3218341234", 17);
 
         curso.agregarEstudiante(camila);
@@ -106,9 +108,9 @@ public class CursoTest {
         curso.agregarEstudiante(ana);
         curso.agregarEstudiante(yudi);
 
-        var listaEsperada = List.of(ana, camila, xiomara, yudi);
+        Collection<Estudiante>  listaEsperada = List.of(ana, camila, xiomara, yudi);
 
-        assertEquals(listaEsperada, curso.obtenerListadoAlfabetico);
+        assertIterableEquals(listaEsperada, curso.obtenerListadoAlfabetico());
 
         LOG.info("Finalización obtenerListadoAlfabetico");
     }
@@ -124,7 +126,7 @@ public class CursoTest {
 
         var camila = new Estudiante("Camila", "Alzate Rios", "109453264", "camila@uniquindio.edu.co", "315635674", 15);
         var xiomara = new Estudiante("Xiomara", "Gomez", "109445634", "xiomara@uniquindio.edu.co", "3148763412", 31);
-        var ana = new Estudiante("Ana Maria", "Quintero", "109453264", "anamaria@uniquindio.edu.co", "3137442312", 28);
+        var ana = new Estudiante("Ana Maria", "Quintero", "109498764", "anamaria@uniquindio.edu.co", "3137442312", 28);
         var yudi = new Estudiante("Yudi", "Pulgarin", "1092394924", "yudi@uniquindio.edu.co", "3218341234", 17);
 
         curso.agregarEstudiante(camila);
@@ -134,7 +136,7 @@ public class CursoTest {
 
         var listaEsperada = List.of(xiomara, ana, yudi, camila);
 
-        assertEquals(listaEsperada, curso.obtenerListadoAlfabetico);
+        assertIterableEquals(listaEsperada, curso.obtenerListadoEdadDescente());
 
         LOG.info("Finalización obtenerListadoEdadDescente");
     }
@@ -150,7 +152,7 @@ public class CursoTest {
 
         var camila = new Estudiante("Camila", "Alzate Rios", "109453264", "camila@uniquindio.edu.co", "315635674", 15);
         var xiomara = new Estudiante("Xiomara", "Gomez", "109445634", "xiomara@uniquindio.edu.co", "3148763412", 31);
-        var ana = new Estudiante("Ana Maria", "Quintero", "109453264", "anamaria@uniquindio.edu.co", "3137442312", 28);
+        var ana = new Estudiante("Ana Maria", "Quintero", "109498764", "anamaria@uniquindio.edu.co", "3137442312", 28);
         var yudi = new Estudiante("Yudi", "Pulgarin", "1092394924", "yudi@uniquindio.edu.co", "3218341234", 17);
 
         curso.agregarEstudiante(camila);
@@ -158,9 +160,9 @@ public class CursoTest {
         curso.agregarEstudiante(ana);
         curso.agregarEstudiante(yudi);
 
-        var listaEsperada = List.of(camila, yudi);
+        Collection<Estudiante>  listaEsperada = List.of(camila, yudi);
 
-        assertEquals(listaEsperada, curso.obtenerListadoAlfabetico);
+        assertIterableEquals(listaEsperada, curso.obtenerListadoMenoresEdad());
 
         LOG.info("Finalización obtenerListadoMenoresEdad");
     }
