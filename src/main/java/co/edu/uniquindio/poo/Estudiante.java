@@ -10,7 +10,7 @@ package co.edu.uniquindio.poo;
  * (https://raw.githubusercontent.com/grid-uq/poo/main/LICENSE)
  */
 
-public record Estudiante(String nombres, String apellidos, String numeroIdentificacion, String correo, String telefono, int edad) {
+public record Estudiante(String nombres, String apellidos, String numeroIdentificacion, String correo, String telefono, byte edad) {
 
     public Estudiante {
         assert nombres != null;
