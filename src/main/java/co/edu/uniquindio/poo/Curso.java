@@ -106,11 +106,19 @@ public class Curso {
         return Collections.unmodifiableCollection(estudiantesMenoresEdad);
     }
 
-    private boolean validarNumeroIdentificacionExiste(String numeroIdenficacion) {
+    /**
+     * Método privado para determinar si ya existe un estudiante registro en el
+     * mismo número de identificación
+     * 
+     * @param numeroIdentificacion Número de identificación a buscar
+     * @return Valor boolean que indica si el número de identificación ya está o no
+     *         registrado.
+     */
+    private boolean validarNumeroIdentificacionExiste(String numeroIdentificacion) {
         boolean existe = false;
 
         for (Estudiante estudiante : estudiantes) {
-            if (estudiante.numeroIdentificacion().equals(numeroIdenficacion)) {
+            if (estudiante.numeroIdentificacion().equals(numeroIdentificacion)) {
                 existe = true;
             }
         }
