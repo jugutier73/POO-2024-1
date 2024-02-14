@@ -53,7 +53,7 @@ public class ClienteTest {
     @Test
     public void datosVacios() {
         LOG.info("Inicio datosVacios");
-        assertThrows(Throwable.class, () -> new Estudiante("", "", "", "", "", 0));
+        assertThrows(Throwable.class, () -> new Estudiante("", "", "", "camila@uniquindio.edu.co", "", 18));
         LOG.info("Finalización datosVacios");
     }
 
