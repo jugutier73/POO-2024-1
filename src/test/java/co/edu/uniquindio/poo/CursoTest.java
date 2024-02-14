@@ -21,7 +21,7 @@ import org.junit.jupiter.api.Test;
  * Unit test for simple App.
  */
 public class CursoTest {
-    private static final Logger LOG = Logger.getLogger(ClienteTest.class.getName());
+    private static final Logger LOG = Logger.getLogger(EstudianteTest.class.getName());
 
     /**
      * Prueba para verificar que los datos de un estudiante estén completos
