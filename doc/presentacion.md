@@ -126,6 +126,7 @@ Almacenar la información de **VARIOS** estudiantes, incluyendo su número de id
   - Obtener el nombre del curso
   - Agregar un estudiante al curso
       - Validar que el número de identificación no exista
+  - Obtener estudiante por su número de identificación
   - Obtener el listado de los estudiantes en orden alfabético
   - Obtener el listado de los estudiantes en orden descendente según la edad
   - Obtener el listado de los estudiantes menores de edad
