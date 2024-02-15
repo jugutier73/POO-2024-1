@@ -164,7 +164,7 @@ Clase: **Estudiante**
 | Edad negativa | Estudiante(“Camila, Alzate Rios”, “109453264”, “camila@uniquindio.edu.co”, “315635674”, -18) |Error, la edad no pueden ser negativos                      |
 | Correo inválido | Estudiante(“Camila, Alzate Rios”, “109453264”, “cami”, “315635674”, 18)  | Error, el correo del estudiante es invalido         |
 
-Pruebas a sociadas a las clase **Estudiante** que se está reutilizando del Problema 01.
+Pruebas a asociadas a las clase **Estudiante** que se está reutilizando del Problema 01.
 </div>
 
 ---
