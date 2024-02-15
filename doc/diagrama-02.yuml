@@ -2,4 +2,4 @@
 // {direction:leftToRight}
 // {generate:true}
 
-[Estudiante|nombres:Texto;apellidos:Texto;numeroIdentificacion:Texto;correo:Texto;telefono:Texto;edad:Entero|+constructor(nombres:Texto,apellidos:Texto,numeroIdentificacion:Texto, correo:Texto, telefono:Texto, edad:Entero)|+geNombres():Texto;+getApellidos():Texto;+getNumeroIdentificacion():Texto;+getCorreo():Texto;+getTelefono():Texto;+getEdad(): Entero]
+[Estudiante|nombres:Texto;apellidos:Texto;numeroIdentificacion:Texto;correo:Texto;telefono:Texto;edad:Entero|+constructor(nombres:Texto,apellidos:Texto,numeroIdentificacion:Texto, correo:Texto, telefono:Texto, edad:Entero)+geNombres():Texto;+getApellidos():Texto;+getNumeroIdentificacion():Texto;+getCorreo():Texto;+getTelefono():Texto;+getEdad(): Entero]
