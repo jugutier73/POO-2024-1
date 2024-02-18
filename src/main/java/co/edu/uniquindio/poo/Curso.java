@@ -4,8 +4,6 @@ import java.util.Collection;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.LinkedList;
-import java.util.Optional;
-import java.util.function.Predicate;
 
 public class Curso {
     private final String nombre;
@@ -48,26 +46,30 @@ public class Curso {
      * @param numeroIdenficacion Número de identificación del estudiante a buscar
      * @return Estudiante con el número de indicación indicado o null
      */
-    public Optional<Estudiante> obtenerEstudiante(String numeroIdenficacion) {
-        Predicate<Estudiante> condicion = estudiante -> estudiante.numeroIdentificacion().equals(numeroIdenficacion);
+    public Estudiante obtenerEstudiante(String numeroIdenficacion) {
+        Estudiante estudianteInteres = null;
 
-        return estudiantes.stream().filter(condicion).findAny();
+        for (Estudiante estudiante : estudiantes) {
+            if (estudiante.numeroIdentificacion().equals(numeroIdenficacion)) {
+                estudianteInteres = estudiante;
+            }
+        }
+        return estudianteInteres;
     }
 
     /**
-     * Método para obtener el listado de estudiantes
+     * Método para obtener la colección NO modificable de los estudiantes del curso
      * 
-     * @return Lista no modificable de los estudiantes registrados en el curso
+     * @return la colección NO modificable de los estudiantes del curso
      */
     public Collection<Estudiante> getEstudiantes() {
         return Collections.unmodifiableCollection(estudiantes);
     }
 
     /**
-     * Método para obtener el listado de estudiantes en orden alfabético
+     * Método para obtener la colección NO modificable de los estudiantes del curso en orden alfabético
      * 
-     * @return Lista no modificable de los estudiantes registrados en el curso en
-     *         orden alfabético
+     * @return la colección NO modificable de los estudiantes del curso en orden alfabético
      */
     public Collection<Estudiante> obtenerListadoAlfabetico() {
         var comparador = Comparator.comparing(Estudiante::nombres);
@@ -76,10 +78,9 @@ public class Curso {
     }
 
     /**
-     * Método para obtener el listado de estudiantes en orden descendente de la edad
+     * Método para obtener la colección NO modificable de los estudiantes del curso en orden descendente de la edad
      * 
-     * @return Lista no modificable de los estudiantes registrados en el curso en
-     *         descendente por edad.
+     * @return la colección NO modificable de los estudiantes del curso en descendente por edad.
      */
     public Collection<Estudiante> obtenerListadoEdadDescente() {
         var comparador = Comparator.comparing(Estudiante::edad).reversed();
@@ -88,15 +89,18 @@ public class Curso {
     }
 
     /**
-     * Método para obtener el listado de estudiantes que son menores de edad
+     * Método para obtener la colección NO modificable de los estudiantes del curso que son menores de edad
      * 
-     * @return Lista no modificable de los estudiantes registrados en el curso que
-     *         son menores de edad.
+     * @return la colección NO modificable de los estudiantes del curso que son menores de edad.
      */
     public Collection<Estudiante> obtenerListadoMenoresEdad() {
-        return estudiantes.stream()
-                .filter(estudiante -> estudiante.edad() < 18)
-                .toList();
+        var estudiantesMenoresEdad = new LinkedList<Estudiante>();
+        for (Estudiante estudiante : estudiantes) {
+            if (estudiante.edad() < 18) {
+                estudiantesMenoresEdad.add(estudiante);
+            }
+        }
+        return Collections.unmodifiableCollection(estudiantesMenoresEdad);
     }
 
     /**
@@ -108,8 +112,15 @@ public class Curso {
      *         registrado.
      */
     private boolean validarNumeroIdentificacionExiste(String numeroIdentificacion) {
+        boolean existe = false;
 
-        Predicate<Estudiante> condicion = estudiante -> estudiante.numeroIdentificacion().equals(numeroIdentificacion);
-        return estudiantes.stream().filter(condicion).findAny().isPresent();
+        for (Estudiante estudiante : estudiantes) {
+            if (estudiante.numeroIdentificacion().equals(numeroIdentificacion)) {
+                existe = true;
+            }
+        }
+
+        return existe;
     }
 }
+
