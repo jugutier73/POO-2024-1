@@ -48,7 +48,7 @@ public class Curso {
      * @param numeroIdenficacion Número de identificación del estudiante a buscar
      * @return Estudiante con el número de indicación indicado o null
      */
-    public Optional<Estudiante> obtenerEstudiante(String numeroIdenficacion) {
+    public Optional<Estudiante> getEstudiante(String numeroIdenficacion) {
         Predicate<Estudiante> condicion = estudiante -> estudiante.numeroIdentificacion().equals(numeroIdenficacion);
 
         return estudiantes.stream().filter(condicion).findAny();
@@ -68,7 +68,7 @@ public class Curso {
      * 
      * @return la colección NO modificable de los estudiantes del curso en orden alfabético
      */
-    public Collection<Estudiante> obtenerListadoAlfabetico() {
+    public Collection<Estudiante> getListadoAlfabetico() {
         var comparador = Comparator.comparing(Estudiante::nombres);
         var estudiantesOrdenados = estudiantes.stream().sorted(comparador).toList();
         return Collections.unmodifiableCollection(estudiantesOrdenados);
@@ -79,7 +79,7 @@ public class Curso {
      * 
      * @return la colección NO modificable de los estudiantes del curso en descendente por edad.
      */
-    public Collection<Estudiante> obtenerListadoEdadDescente() {
+    public Collection<Estudiante> getListadoEdadDescente() {
         var comparador = Comparator.comparing(Estudiante::edad).reversed();
         var estudiantesOrdenados = estudiantes.stream().sorted(comparador).toList();
         return Collections.unmodifiableCollection(estudiantesOrdenados);
@@ -90,7 +90,7 @@ public class Curso {
      * 
      * @return la colección NO modificable de los estudiantes del curso que son menores de edad.
      */
-    public Collection<Estudiante> obtenerListadoMenoresEdad() {
+    public Collection<Estudiante> getListadoMenoresEdad() {
         return estudiantes.stream()
                 .filter(estudiante -> estudiante.edad() < 18)
                 .toList();
