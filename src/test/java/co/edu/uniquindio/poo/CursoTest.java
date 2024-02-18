@@ -110,7 +110,7 @@ public class CursoTest {
 
         Collection<Estudiante>  listaEsperada = List.of(ana, camila, xiomara, yudi);
 
-        assertIterableEquals(listaEsperada, curso.obtenerListadoAlfabetico());
+        assertIterableEquals(listaEsperada, curso.getListadoAlfabetico());
 
         LOG.info("Finalización obtenerListadoAlfabetico");
     }
@@ -136,7 +136,7 @@ public class CursoTest {
 
         var listaEsperada = List.of(xiomara, ana, yudi, camila);
 
-        assertIterableEquals(listaEsperada, curso.obtenerListadoEdadDescente());
+        assertIterableEquals(listaEsperada, curso.getListadoEdadDescente());
 
         LOG.info("Finalización obtenerListadoEdadDescente");
     }
@@ -162,7 +162,7 @@ public class CursoTest {
 
         Collection<Estudiante>  listaEsperada = List.of(camila, yudi);
 
-        assertIterableEquals(listaEsperada, curso.obtenerListadoMenoresEdad());
+        assertIterableEquals(listaEsperada, curso.getListadoMenoresEdad());
 
         LOG.info("Finalización obtenerListadoMenoresEdad");
     }
