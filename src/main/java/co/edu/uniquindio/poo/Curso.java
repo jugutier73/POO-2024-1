@@ -58,19 +58,18 @@ public class Curso {
     }
 
     /**
-     * Método para obtener el listado de estudiantes
+     * Método para obtener la colección NO modificable de los estudiantes del curso
      * 
-     * @return Lista no modificable de los estudiantes registrados en el curso
+     * @return la colección NO modificable de los estudiantes del curso
      */
     public Collection<Estudiante> getEstudiantes() {
         return Collections.unmodifiableCollection(estudiantes);
     }
 
     /**
-     * Método para obtener el listado de estudiantes en orden alfabético
+     * Método para obtener la colección NO modificable de los estudiantes del curso en orden alfabético
      * 
-     * @return Lista no modificable de los estudiantes registrados en el curso en
-     *         orden alfabético
+     * @return la colección NO modificable de los estudiantes del curso en orden alfabético
      */
     public Collection<Estudiante> obtenerListadoAlfabetico() {
         var comparador = Comparator.comparing(Estudiante::nombres);
@@ -79,10 +78,9 @@ public class Curso {
     }
 
     /**
-     * Método para obtener el listado de estudiantes en orden descendente de la edad
+     * Método para obtener la colección NO modificable de los estudiantes del curso en orden descendente de la edad
      * 
-     * @return Lista no modificable de los estudiantes registrados en el curso en
-     *         descendente por edad.
+     * @return la colección NO modificable de los estudiantes del curso en descendente por edad.
      */
     public Collection<Estudiante> obtenerListadoEdadDescente() {
         var comparador = Comparator.comparing(Estudiante::edad).reversed();
@@ -91,10 +89,9 @@ public class Curso {
     }
 
     /**
-     * Método para obtener el listado de estudiantes que son menores de edad
+     * Método para obtener la colección NO modificable de los estudiantes del curso que son menores de edad
      * 
-     * @return Lista no modificable de los estudiantes registrados en el curso que
-     *         son menores de edad.
+     * @return la colección NO modificable de los estudiantes del curso que son menores de edad.
      */
     public Collection<Estudiante> obtenerListadoMenoresEdad() {
         var estudiantesMenoresEdad = new LinkedList<Estudiante>();
