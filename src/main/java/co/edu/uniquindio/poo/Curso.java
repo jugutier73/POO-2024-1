@@ -5,6 +5,15 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.LinkedList;
 
+/**
+ * Clase que agrupa los datos de un Curso
+ * 
+ * @author Área de programación UQ
+ * @since 2024-01
+ * 
+ *        Licencia GNU/GPL V3.0
+ *        (https://raw.githubusercontent.com/grid-uq/poo/main/LICENSE)
+ */
 public class Curso {
     private final String nombre;
     private final Collection<Estudiante> estudiantes;
@@ -67,9 +76,11 @@ public class Curso {
     }
 
     /**
-     * Método para obtener la colección NO modificable de los estudiantes del curso en orden alfabético
+     * Método para obtener la colección NO modificable de los estudiantes del curso
+     * en orden alfabético
      * 
-     * @return la colección NO modificable de los estudiantes del curso en orden alfabético
+     * @return la colección NO modificable de los estudiantes del curso en orden
+     *         alfabético
      */
     public Collection<Estudiante> getListadoAlfabetico() {
         var comparador = Comparator.comparing(Estudiante::nombres);
@@ -78,9 +89,11 @@ public class Curso {
     }
 
     /**
-     * Método para obtener la colección NO modificable de los estudiantes del curso en orden descendente de la edad
+     * Método para obtener la colección NO modificable de los estudiantes del curso
+     * en orden descendente de la edad
      * 
-     * @return la colección NO modificable de los estudiantes del curso en descendente por edad.
+     * @return la colección NO modificable de los estudiantes del curso en
+     *         descendente por edad.
      */
     public Collection<Estudiante> getListadoEdadDescente() {
         var comparador = Comparator.comparing(Estudiante::edad).reversed();
@@ -89,9 +102,11 @@ public class Curso {
     }
 
     /**
-     * Método para obtener la colección NO modificable de los estudiantes del curso que son menores de edad
+     * Método para obtener la colección NO modificable de los estudiantes del curso
+     * que son menores de edad
      * 
-     * @return la colección NO modificable de los estudiantes del curso que son menores de edad.
+     * @return la colección NO modificable de los estudiantes del curso que son
+     *         menores de edad.
      */
     public Collection<Estudiante> getListadoMenoresEdad() {
         var estudiantesMenoresEdad = new LinkedList<Estudiante>();
