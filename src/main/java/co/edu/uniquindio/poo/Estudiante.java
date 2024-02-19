@@ -193,7 +193,7 @@ public class Estudiante {
      * @return nota definitiva
      */
     public double getDefinitiva() {
-        validarNotas100Porcento();
+        validarNotas100Porciento();
 
         double definitiva = notasObtenidas.stream()
                 .mapToDouble(n -> (n.getNotaObtenida() * n.getNotaParcial().porcentaje())).sum();
@@ -205,7 +205,7 @@ public class Estudiante {
      * Método de apoyo (privado) para validar que la suma del porcentaje de las
      * notas obtenidas sea 1.0 (100%)
      */
-    private void validarNotas100Porcento() {
+    private void validarNotas100Porciento() {
         double pesoNotas = notasObtenidas.stream()
                 .mapToDouble(n -> n.getNotaParcial().porcentaje()).sum();
         assert (1.0 - pesoNotas) <= App.PRECISION : "Las notas parciales no suman 1.0 (100%)";
