@@ -27,7 +27,7 @@ public class EstudianteTest {
     public void datosCompletos() {
         LOG.info("Inicio datosCompletos");
 
-        Estudiante estudiante = new Estudiante("Camila", "Alzate Rios", "109453264", "camila@uniquindio.edu.co",
+        var estudiante = new Estudiante("Camila", "Alzate Rios", "109453264", "camila@uniquindio.edu.co",
                 "315635674", 18);
 
         assertEquals("Camila", estudiante.nombres());
