@@ -1,0 +1,17 @@
+// {type:class}
+// {direction:leftToRight}
+// {generate:true}
+
+[Curso|-nombre:Texto]
+
+[Estudiante|-nombres:Texto;-apellidos:Texto;-numeroIdentificacion:Texto;-correo:Texto;-telefono:Texto;-edad:Entero]
+
+[NotaParcial|-nombre:Texto;-porcenaje:Real]
+
+[NotaObtenida|-notaObtenida:Real]
+
+
+[Curso]<>1-*>[Estudiante]
+[Curso]<>1-*>[NotaParcial]
+[Estudiante]<>1-*>[NotaObtenida]
+[NotaObtenida]*-1>[NotaParcial]

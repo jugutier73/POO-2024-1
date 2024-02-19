@@ -1,0 +1,17 @@
+// {type:class}
+// {direction:leftToRight}
+// {generate:true}
+
+[Curso|-nombre:Texto|+constructor(nombre:Texto);+getNombre():Texto;+agregarEstudiante(Estudiante:Estudiante);-valiarNumeroIdentificacionExiste():Lógico;+getEstudiante(numeroIdentificacion:Texto):Estudiante;+getEstudiantes():Estudiante*;+getListadoAlfabetico():Estudiante*;+getListadoEdadDescente():Estudiante*;+getListadoMenoresEdad():Estudiante*;+adicionarNotarParcial(nombreNotaParcial:Texto, porcentaje:Real);+getNotarParcial(nombreNotaParcial:Texto):NotaParcial;+getListadoEstudiantesMayorNota():Estudiante*;+getListadoAlfabeticoPerdieron():Estudiante*;+validarParcentajes():Lógico]
+
+[Estudiante|-nombres:Texto;-apellidos:Texto;-numeroIdentificacion:Texto;-correo:Texto;-telefono:Texto;-edad:Entero|+constructor(nombres:Texto,apellidos:Texto,numeroIdentificacion:Texto, correo:Texto, telefono:Texto, edad:Entero);+geNombres():Texto;+getApellidos():Texto;+getNumeroIdentificacion():Texto;+getCorreo():Texto;+getTelefono():Texto;+getEdad(): Entero;+adicionarNotaObtenida(notaParcial:NotaParcial);+getNotaObtenida(nombreNotaParcial:Texto):NotaObtenida;+getNotasObtenidas():NotaObtenida*;+setNotaObtenida(nombreNotaParcial:Texto,notaObtenida:Real);+getDefinitiva():Real]
+
+[<<Registro>>;NotaParcial|-nombre:Texto;-porcenaje:Real|+constructor(nombre:Texto, porcentaje:Real);+getNombre():Texto;getPorcentaje():Real]
+
+[NotaObtenida|-notaObtenida:Real|+constructor(notaParcial:NotaParcial, notaObtenida:Real);+getNotaParcial():NotaParcial;+getNotaObtenida():Real;+setNotaObtenida(notaObtenida:Real)]
+
+
+[Curso]<>1-*>[Estudiante]
+[Curso]<>1-*>[<<Registro>>;NotaParcial]
+[Estudiante]<>1-*>[NotaObtenida]
+[NotaObtenida]*-1>[<<Registro>>;NotaParcial]
