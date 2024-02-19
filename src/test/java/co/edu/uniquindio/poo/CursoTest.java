@@ -1,10 +1,4 @@
-/**
- * Clase para probar el funcionamiento del código de un curso
- * @author Área de programación UQ
- * @since 2024-01
- * 
- * Licencia GNU/GPL V3.0 (https://raw.githubusercontent.com/grid-uq/poo/main/LICENSE) 
- */
+
 package co.edu.uniquindio.poo;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -15,10 +9,17 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 import java.util.Collection;
 import java.util.List;
 import java.util.logging.Logger;
+
 import org.junit.jupiter.api.Test;
 
 /**
- * Unit test for simple App.
+ * Clase para probar el funcionamiento del código de un curso
+ * 
+ * @author Área de programación UQ
+ * @since 2024-01
+ * 
+ *        Licencia GNU/GPL V3.0
+ *        (https://raw.githubusercontent.com/grid-uq/poo/main/LICENSE)
  */
 public class CursoTest {
     private static final Logger LOG = Logger.getLogger(EstudianteTest.class.getName());
@@ -108,7 +109,7 @@ public class CursoTest {
         curso.agregarEstudiante(ana);
         curso.agregarEstudiante(yudi);
 
-        Collection<Estudiante>  listaEsperada = List.of(ana, camila, xiomara, yudi);
+        Collection<Estudiante> listaEsperada = List.of(ana, camila, xiomara, yudi);
 
         assertIterableEquals(listaEsperada, curso.getListadoAlfabetico());
 
@@ -160,7 +161,7 @@ public class CursoTest {
         curso.agregarEstudiante(ana);
         curso.agregarEstudiante(yudi);
 
-        Collection<Estudiante>  listaEsperada = List.of(camila, yudi);
+        Collection<Estudiante> listaEsperada = List.of(camila, yudi);
 
         assertIterableEquals(listaEsperada, curso.getListadoMenoresEdad());
 
