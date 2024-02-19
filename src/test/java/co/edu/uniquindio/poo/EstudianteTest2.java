@@ -1,19 +1,20 @@
-/**
- * Clase para probar el funcionamiento del código de un estudiante
- * @author Área de programación UQ
- * @since 2024-01
- * 
- * Licencia GNU/GPL V3.0 (https://raw.githubusercontent.com/grid-uq/poo/main/LICENSE) 
- */
 package co.edu.uniquindio.poo;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
+
 import java.util.logging.Logger;
+
 import org.junit.jupiter.api.Test;
 
 /**
- * Banco de pruebas unitarias para la clase Estudiante - Parte 2
+ * Clase para probar el funcionamiento del código de un estudiante
+ * 
+ * @author Área de programación UQ
+ * @since 2024-01
+ * 
+ *        Licencia GNU/GPL V3.0
+ *        (https://raw.githubusercontent.com/grid-uq/poo/main/LICENSE)
  */
 public class EstudianteTest2 {
     private static final Logger LOG = Logger.getLogger(EstudianteTest2.class.getName());

@@ -15,7 +15,6 @@ import java.util.function.Predicate;
  *        Licencia GNU/GPL V3.0
  *        (https://raw.githubusercontent.com/grid-uq/poo/main/LICENSE)
  */
-
 public class Estudiante {
     private final String nombres;
     private final String apellidos;
@@ -145,9 +144,13 @@ public class Estudiante {
     }
 
     /**
-     * Método de apoyo (privado) para buscar una posible nota obtenida asociada a una nota parcial
-     * @param nombreNotaParcial nombre de la nota parcial asociada a la nota obtenida
-     * @return posible nota obtenida (si existe) asociada a la nota parcial del nombre indicado
+     * Método de apoyo (privado) para buscar una posible nota obtenida asociada a
+     * una nota parcial
+     * 
+     * @param nombreNotaParcial nombre de la nota parcial asociada a la nota
+     *                          obtenida
+     * @return posible nota obtenida (si existe) asociada a la nota parcial del
+     *         nombre indicado
      */
     private Optional<NotaObtenida> buscarNotaParcial(String nombreNotaParcial) {
         Predicate<NotaObtenida> nombreIgual = j -> j.getNotaParcial().nombre().equals(nombreNotaParcial);
@@ -168,8 +171,10 @@ public class Estudiante {
 
     /**
      * Método para actualizar la nota que tiene una nota obtenida por el estudiante
-     * @param nombreNotaParcial nombre de la nota parcial a la que la nota está asociada
-     * @param notaObtenida nueva nota obtenida
+     * 
+     * @param nombreNotaParcial nombre de la nota parcial a la que la nota está
+     *                          asociada
+     * @param notaObtenida      nueva nota obtenida
      */
     public void setNotaObtenida(String nombreNotaParcial, double notaObtenida) {
         assert notaObtenida >= 0.0 : "La nota obtenida no puede ser menor a cero";
@@ -182,7 +187,9 @@ public class Estudiante {
     }
 
     /**
-     * Método para obtener la nota definitiva usando un promedio ponderado suma de todas (nota * porcentaje)
+     * Método para obtener la nota definitiva usando un promedio ponderado suma de
+     * todas (nota * porcentaje)
+     * 
      * @return nota definitiva
      */
     public double getDefinitiva() {
@@ -195,7 +202,8 @@ public class Estudiante {
     }
 
     /**
-     * Método de apoyo (privado) para validar que la suma del porcentaje de las notas obtenidas sea 1.0 (100%)
+     * Método de apoyo (privado) para validar que la suma del porcentaje de las
+     * notas obtenidas sea 1.0 (100%)
      */
     private void validarNotas100Porcento() {
         double pesoNotas = notasObtenidas.stream()

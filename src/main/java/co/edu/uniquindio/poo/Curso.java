@@ -15,8 +15,6 @@ import java.util.function.Predicate;
  * 
  * Licencia GNU/GPL V3.0 (https://raw.githubusercontent.com/grid-uq/poo/main/LICENSE) 
  */
-
- 
 public class Curso {
     private final String nombre;
     private final Collection<Estudiante> estudiantes;

@@ -1,15 +1,13 @@
-/**
- * Clase principal
- * @author Área de programación UQ
- * @since 2024-01
- * 
- * Licencia GNU/GPL V3.0 (https://raw.githubusercontent.com/grid-uq/poo/main/LICENSE) 
- */
-
 package co.edu.uniquindio.poo;
 
 /**
- * Aplicación principal
+ * Clase principal
+ * 
+ * @author Área de programación UQ
+ * @since 2024-01
+ * 
+ *        Licencia GNU/GPL V3.0
+ *        (https://raw.githubusercontent.com/grid-uq/poo/main/LICENSE)
  */
 public class App {
     // CONSTANTES GLOBALEs

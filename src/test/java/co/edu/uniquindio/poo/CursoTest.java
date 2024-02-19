@@ -1,10 +1,3 @@
-/**
- * Clase para probar el funcionamiento del código de un curso
- * @author Área de programación UQ
- * @since 2024-01
- * 
- * Licencia GNU/GPL V3.0 (https://raw.githubusercontent.com/grid-uq/poo/main/LICENSE) 
- */
 package co.edu.uniquindio.poo;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -15,10 +8,17 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 import java.util.Collection;
 import java.util.List;
 import java.util.logging.Logger;
+
 import org.junit.jupiter.api.Test;
 
 /**
- * Banco de pruebas unitarias para la clase Curso - Parte 1
+ * Clase para probar el funcionamiento del código de un curso
+ * 
+ * @author Área de programación UQ
+ * @since 2024-01
+ * 
+ *        Licencia GNU/GPL V3.0
+ *        (https://raw.githubusercontent.com/grid-uq/poo/main/LICENSE)
  */
 public class CursoTest {
     private static final Logger LOG = Logger.getLogger(CursoTest.class.getName());

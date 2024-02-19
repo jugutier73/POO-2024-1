@@ -9,7 +9,6 @@ package co.edu.uniquindio.poo;
  *        Licencia GNU/GPL V3.0
  *        (https://raw.githubusercontent.com/grid-uq/poo/main/LICENSE)
  */
-
 public record NotaParcial(String nombre, double porcentaje) {  
     
     /**
