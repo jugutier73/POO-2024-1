@@ -1,0 +1,16 @@
+// {type:class}
+// {direction:leftToRight}
+// {generate:true}
+
+[Curso|-nombre:Texto|+constructor(nombre:Texto);+agregarEstudiante(Estudiante:Estudiante);+obtenerEstudiante(numeroIdentificacion:Texto):Estudiante;+getEstudiantes():Estudiante*;+obtenerListadoAlfabetico():Estudiante*;+obtenerListadoEdadDescente():Estudiante*;+obtenerListadoMenoresEdad():Estudiante*;-valiarNumeroIdentificacionExiste():Lógico;+programarClase(fechaClase:fecha);getClases():ClaseCurso*;+getAsistentes(claseCurso:ClaseCurso):Estudiante*;+getAusentes(claseCurso:ClaseCurso):Estudiante*;+calcularPorcentajeAsistencia(claseCurso:ClaseCurso):Real;+calcularAusenciasEstudiante(estudiante:Estudiante):Entero]
+[Estudiante|-nombres:Texto;-apellidos:Texto;-numeroIdentificacion:Texto;-correo:Texto;-telefono:Texto;-edad:Entero|+constructor(nombres:Texto,apellidos:Texto,numeroIdentificacion:Texto, correo:Texto, telefono:Texto, edad:Entero);+geNombres():Texto;+getApellidos():Texto;+getNumeroIdentificacion():Texto;+getCorreo():Texto;+getTelefono():Texto;+getEdad(): Entero;+asignarAsistencia(claseCurso:ClaseCurso);+getAsistencias():Asistencia*;+asistioClase(claseCurso:ClaseCurso):Lógico]
+
+[<<Registro>>;ClaseCurso|-fechaClase:Fecha|+getFecha():Fecha]
+[<<Registro>>;Asistencia||+constructor(tipoAsistencia:TipoAsistenicia);getTipoAsistencia():TipoAsistenicia]
+[<<Enum>;TipoAsistenicia|PRESENTE;AUSENTE]
+
+[Curso]<>1-*>[Estudiante]
+[Curso]<>1-*>[<<Registro>>;ClaseCurso]
+[Estudiante]-*>[<<Registro>>;Asistencia]
+[<<Registro>>;Asistencia]*-1>[<<Registro>>;ClaseCurso]
+[<<Registro>>;Asistencia]*-1>[<<Enum>;TipoAsistenicia]

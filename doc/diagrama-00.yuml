@@ -1,0 +1,15 @@
+// {type:class}
+// {direction:leftToRight}
+// {generate:true}
+
+[Curso|-nombre:Texto]
+[Estudiante|-nombres:Texto;-apellidos:Texto;-numeroIdentificacion:Texto;-correo:Texto;-telefono:Texto;-edad:Entero]
+[<<Registro>>;ClaseCurso|-fechaClase:Fecha]
+[<<Registro>>;Asistencia]
+[<<Enum>;TipoAsistenicia|PRESENTE;AUSENTE]
+[Curso]<>1-*>[Estudiante]
+[Curso]<>1-*>[<<Registro>>;ClaseCurso]
+
+[Estudiante]-*>[<<Registro>>;Asistencia]
+[<<Registro>>;Asistencia]*-1>[<<Registro>>;ClaseCurso]
+[<<Registro>>;Asistencia]*-1>[<<Enum>;TipoAsistenicia]
