@@ -11,7 +11,7 @@ package co.edu.uniquindio.poo;
  */
 
 public record Estudiante(String nombres, String apellidos, String numeroIdentificacion, String correo, String telefono,
-        int edad) {
+        byte edad) {
 
     public Estudiante {
         assert nombres != null && !nombres.isBlank() : "El nombre debe ser diferente de null";
