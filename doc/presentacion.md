@@ -36,7 +36,7 @@ Facultad de Ingeniería
 <div style="position: absolute; left: 45%; top:20%; background-color: rgb(212, 231, 205); width: 550px">
 <b>
 Problema: <br />
-Pre-parcial<br />
+Parcial I<br />
 </b>
 </div>
 
