@@ -1,0 +1,15 @@
+// {type:class}
+// {direction:leftToRight}
+// {generate:true}
+
+
+[Agenda|-nombre:Texto;descripcion:Texto|+getNombre():Texto;+getDescripcion():Texto;+agregarContacto(Contacto contacto);+getContactos():Conctacto*;+getGrupos():Grupo*;-existeContacto(Contacto contacto):Lógico]
+[Grupo|-nombre:Texto|+getCategoria():Categoria;addContacto(Contacto contacto);+getContactos():Contacto*]
+[<<Registro>>;Contacto|-nombre:Texto;alias:Texto;direccion:Texto;telefono:Texto;email:Texto|+getNombre():Texto;+getAlias():Texto;+getDireccion():Texto;+getTelefono():Texto;+getEMail():Texto]
+[<<Enum>>;Categoria|OFICINA;FIESTA;AMIGOS;FAMILIA]
+
+[Agenda]<>1-*>[<<Registro>>;Contacto]
+[Agenda]<>1-*>[Grupo]
+[Grupo]*-1>[<<Enum>>;Categoria]
+[Grupo]*-*[<<Registro>>;Contacto]
+

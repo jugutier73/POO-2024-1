@@ -1,0 +1,16 @@
+// {type:class}
+// {direction:leftToRight}
+// {generate:true}
+
+
+
+[Agenda|-nombre:Texto;-descripcion:Texto]
+[<<Registro>>;Contacto|-nombre:Texto;alias:Texto;direccion:Texto;telefono:Texto;email:Texto]
+[Agenda|-nombre:Texto]
+[Grupo|-nombre:Texto]
+[<<Enum>>;Categoria|OFICINA;FIESTA;AMIGOS;FAMILIA]
+
+[Agenda]<>1-*>[<<Registro>>;Contacto]
+[Agenda]<>1-*>[Grupo]
+[Grupo]*-1>[<<Enum>>;Categoria]
+[Grupo]*-*[<<Registro>>;Contacto]
